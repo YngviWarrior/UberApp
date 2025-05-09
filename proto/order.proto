@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package pb;
+option go_package = "./pb";
+
+message Order {
+  string id = 1;
+  string user_id = 2;
+  string veichle_id = 3;
+  string address_id = 4;
+  string status = 5; // "pending", "accepted", "completed", "canceled"
+}
+
+message OrderRegisterRequest {
+  Order order = 1;
+}
+
+message OrderRegisterResponse {
+  Order order = 1;
+}
+
+message OrderCancelRequest {
+  string id = 1;
+  string status = 2; // "pending", "accepted", "completed", "canceled"
+}
+message OrderCancelResponse {
+  Order order = 1;
+}

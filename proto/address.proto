@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package pb;
+option go_package = "./pb";
+
+message Address {
+  string id = 1;
+  string street = 2;
+  string city = 3;
+  string state = 4;
+  string country = 5;
+  string zip_code = 6;
+  string number = 7;
+  string complement = 8;
+  string reference = 9;
+  string neighborhood = 10;   
+}
+
+message AddressRegisterRequest {
+  Address address = 1;
+}
+
+message AddressRegisterResponse {
+  Address address = 1;
+}

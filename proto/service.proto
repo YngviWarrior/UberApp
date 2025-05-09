@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package pb;
+option go_package = "./pb";
+
+import  "user.proto";
+import  "veichle.proto";
+import  "order.proto";
+
+service UberService {
+    rpc RegisterUser(UserRegisterRequest) returns (UserRegisterResponse);
+    rpc RegisterVeichle(VeichleRegisterRequest) returns (VeichleRegisterResponse);
+    rpc RegisterAddress(AddressRegisterRequest) returns (AddressRegisterResponse);
+
+    rpc RegisterOrder(OrderRegisterRequest) returns (OrderRegisterResponse);
+    rpc CancelOrder(OrderCancelRequest) returns (OrderCancelResponse);
+
+    rpc RegisterCard(CardRegisterRequest) returns (CardRegisterResponse);
+}

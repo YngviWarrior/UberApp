@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package pb;
+option go_package = "./pb";
+
+message Veichle {
+  string id = 1;
+  string model = 2;
+  string color = 3;
+  string plate = 4;
+  string type = 5;
+  string year = 6;
+  string brand = 7;
+}
+
+message VeichleRegisterRequest {
+  Veichle veichle = 1;
+}
+
+message VeichleRegisterResponse {
+  Veichle Veichle = 1;
+}

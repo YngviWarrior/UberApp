@@ -1,0 +1,12 @@
+1) RegisterUser: An table to handle Customer and Drive actors (differencing them by userType), when register occurs will be ask for card, address and veichle (if is an Driver actor).
+
+2) RegisterVeichle: If theres more then one veichle, theres an endpoint to register.
+3) RegisterAddress: If theres more then one address, theres an endpoint to register.
+4) RegisterCard: If theres more then one card, theres an endpoint to register.
+
+5) RegisterOrder: An table to handle orders, when registered, will create an payment register with the method of payment. The table holds info like, the orderType(like uber black run) and the orderStatus(In Progress, Finished, Canceled)
+6) CancelOrder: When the order is canceled the initial payment will be refund, the driver will return to an queue(could be do using messages brokers) marking him as available driver.
+
+The API should be prepared using microservices for future expansion, but as a prototype an unique API is sufficient.
+
+

@@ -1,0 +1,21 @@
+syntax = "proto3";
+package pb;
+
+option go_package = "./pb";
+
+message Card {
+  string id = 1;
+  string user_id = 2;
+  string card_number = 3;
+  string card_type = 4; // "visa", "mastercard", etc.
+  string expiration_date = 5;
+  string cvv = 6;
+}
+
+message CardRegisterRequest {
+  Card card = 1;
+}
+
+message CardRegisterResponse {
+  Card card = 1;
+}
